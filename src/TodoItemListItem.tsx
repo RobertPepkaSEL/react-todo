@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function TodoItem() {
+export function TodoItemListItem() {
   return (
     <li>
       <input type="text" />
