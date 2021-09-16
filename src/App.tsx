@@ -19,7 +19,7 @@ function App() {
       <header className="App-header">
         <h1>Todos</h1>
         <ul>{ todos.map((todo, index) => (
-          <TodoItemListItem key={index} />
+          <TodoItemListItem key={index} item={todo} />
         ))}
         </ul>
         <button onClick={handleClick}>Add Todo</button>
