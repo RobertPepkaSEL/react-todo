@@ -2,7 +2,7 @@
 
 This project demonstrates how to make a simple todo app with react and typescript.
 
-##Getting Started
+## Getting Started
 
 Clone from github, then get started by running `yarn` in the root directory of the repository.
 
