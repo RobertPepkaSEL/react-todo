@@ -14,12 +14,28 @@ function App() {
     }]);
   }
 
+  function handleDescriptionChanged(index: number, newDescription: string) {
+    const newTodos = [...todos];
+    newTodos[index].description = newDescription;
+    setTodos(newTodos);
+  }
+
+  function handleDoneClick(index: number, done: boolean) {
+    const newTodos = [...todos];
+    newTodos[index].done = !done;
+    setTodos(newTodos);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Todos</h1>
         <ul>{ todos.map((todo, index) => (
-          <TodoItemListItem key={index} item={todo} />
+          <TodoItemListItem
+            key={index} item={todo} 
+            onDescriptionChanged={(description) => handleDescriptionChanged(index, description)}
+            onDoneClick={() => handleDoneClick(index, todo.done)}
+          />
         ))}
         </ul>
         <button onClick={handleClick}>Add Todo</button>
